@@ -12,10 +12,10 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <button><Link to="/">Home</Link></button>
-          <button><Link to = "/getStarted">Get Started</Link></button>
-          <Route exact path = "/getStarted" component = {GetStarted}/>
-          <Route exact path = "/" component = {LandingPage}/>
+          <button><Link to='/'>Home</Link></button>
+          <button><Link to = '/getStarted'>Get Started</Link></button>
+          <Route exact path = '/getStarted' component = {GetStarted}/>
+          <Route exact path = '/' component = {LandingPage}/>
         </div>
       </BrowserRouter>
     );

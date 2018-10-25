@@ -5,7 +5,8 @@ module.exports = {
   entry: `${__dirname}/src/main.js`,
   output: {
     filename: 'bundle.js',
-    path: `${__dirname}/src/build`
+    path: `${__dirname}/src/build`,
+    publicPath: '/'
   },
   plugins: [
     new HTMLPlugin({template: `${__dirname}/src/index.html`}),
@@ -19,5 +20,8 @@ module.exports = {
         loader: 'babel-loader',
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
   }
 }
